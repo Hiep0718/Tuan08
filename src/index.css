@@ -1,0 +1,162 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "menu header"
+    "menu overview"
+    "menu content";
+  grid-template-columns: 1fr 3fr;
+  gap: 5px;
+  background-color: #2196F3;
+  padding: 5px;
+}
+.container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.container > div.header {
+  grid-area: header;
+  display: flex;
+}
+.container > div.menu {
+  grid-area: menu;
+  padding: 10px;
+}
+.container > div.content {
+  grid-area: content;
+}
+.container > div.overview {
+  grid-area: overview;
+}
+.logo{
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+.logo > img{
+  height: 50px;
+}
+.logo > h2{
+  line-height: 50px;
+  font-size: 40px;
+  margin: 0px;
+}
+
+.btn{
+  display: flex;
+  margin: 20px;
+  width: 80%;
+  height: 48px;
+  border: 0px;
+  align-items: center;
+  border-radius: 10px;
+  background-color: pink;
+}
+
+.btn-unactive{
+  display: flex;
+  margin: 20px;
+  width: 80%;
+  height: 48px;
+  border: 0px;
+  align-items: center;
+  border-radius: 10px;
+  color: grey;
+}
+
+.btn >  h2{
+  margin-left: 10px;
+  color: aliceblue;
+}
+.btn-unactive >  h2{
+  margin-left: 10px;
+}
+
+.btn:hover{
+  display: flex;
+  margin: 20px;
+  width: 80%;
+  height: 48px;
+  border: 0px;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(255, 131, 151);
+  cursor: pointer;
+}
+
+.btn:active{
+  display: flex;
+  margin: 20px;
+  width: 80%;
+  height: 48px;
+  border: 0px;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(255, 56, 89);
+  cursor: pointer;
+}
+
+.btn-unactive:hover{
+  display: flex;
+  margin: 20px;
+  width: 80%;
+  height: 48px;
+  border: 0px;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(255, 131, 151);
+  cursor: pointer;
+}
+
+.btn-unactive:active{
+  display: flex;
+  margin: 20px;
+  width: 80%;
+  height: 48px;
+  border: 0px;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(255, 56, 89);
+  cursor: pointer;
+}
+
+.update{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(173, 223, 240);
+  border-radius: 10px;
+  width: 180px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding:10px;
+}
+.update > img{
+  width: 80%;
+  height: 150px;
+}
+.btn-try{
+  width: 100%;
+  border: 1px solid navy;
+  border-radius: 5px;
+  color: navy;
+  line-height: 30px;
+  font-size: 15px;
+}
+.btn-try:hover{
+  border: 1px solid navy;
+  border-radius: 5px;
+  color: navy;
+  background-color: lightblue;
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.btn-try:active{
+  border: 1px solid navy;
+  border-radius: 5px;
+  color: navy;
+  background-color: rgb(138, 205, 228);
+  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
