@@ -279,10 +279,29 @@ export default function RootPage(){
                 Hủy
                 </button>
                 <button
-                onClick={() => {
-                    // TODO: xử lý lưu dữ liệu
-                    console.log("Dữ liệu sau khi sửa:", selectedRow);
+                onClick={async () => {
+                    try {
+                    const response = await fetch(`http://localhost:8000/customer/${selectedRow.id}`, {
+                        method: "PUT",
+                        headers: {
+                        "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(selectedRow),
+                    });
+
+                    if (!response.ok) {
+                        throw new Error("Failed to update data");
+                    }
+
+                    // Khi PUT thành công → refetch lại dữ liệu
+                    const updatedData = await fetch('http://localhost:8000/customer').then(res => res.json());
+                    setData(updatedData);
                     setIsModalOpen(false);
+                    console.log("Update thành công!");
+
+                    } catch (error) {
+                    console.error("Update lỗi:", error);
+                    }
                 }}
                 style={{ padding: "8px 16px", backgroundColor: "#4ade80", border: "none", borderRadius: "5px", color: "#fff", cursor: "pointer" }}
                 >

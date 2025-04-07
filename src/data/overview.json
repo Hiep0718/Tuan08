@@ -1,317 +1,156 @@
 {
-    "overview": [
-      {
-        "name": "Turnover",
-        "value": 92.405,
-        "period": 5.39,
-        "icon": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925416/Chefify/oodvleks2jx9gmhgoh3x.png",
-        "currency": true
-      },
-      {
-        "name": "Profit",
-        "value": 32.218,
-        "period": 5.39,
-        "icon":"https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925417/Chefify/icljrfxnlgwmkj0npmzm.png",
-        "currency": true
-      },
-      {
-        "name": "New customer",
-        "value": 298,
-        "period": 6.84,
-        "icon": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925417/Chefify/wmslsbipnx9ra38r52mi.png",
-        "currency": false
-      }
-    ], 
-    "customer":[
-        {
-            "customerName": "Elizabeth Lee",
-            "company": "AvatarSystems",
-            "orderValue": "$359",
-            "orderDate": "10/07/2023",
-            "status": "New",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Carlos Garcia",
-            "company": "SmoozeShift",
-            "orderValue": "$747",
-            "orderDate": "24/07/2023",
-            "status": "New",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Elizabeth Bailey",
-            "company": "Prime Time Telecom",
-            "orderValue": "$564",
-            "orderDate": "08/08/2023",
-            "status": "In-progress",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Ryan Brown",
-            "company": "OmniTech Corporation",
-            "orderValue": "$541",
-            "orderDate": "31/08/2023",
-            "status": "In-progress",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Ryan Young",
-            "company": "DataStream Inc.",
-            "orderValue": "$769",
-            "orderDate": "01/05/2023",
-            "status": "Completed",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Hailey Adams",
-            "company": "FlowRush",
-            "orderValue": "$922",
-            "orderDate": "10/06/2023",
-            "status": "Completed",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Sophia Turner",
-            "company": "CloudWave",
-            "orderValue": "$650",
-            "orderDate": "11/03/2023",
-            "status": "New",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Ethan Morris",
-            "company": "DataMinds",
-            "orderValue": "$732",
-            "orderDate": "22/01/2023",
-            "status": "Completed",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Olivia Clark",
-            "company": "SkyNet Solutions",
-            "orderValue": "$815",
-            "orderDate": "15/09/2023",
-            "status": "In-progress",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Elizabeth Lee",
-            "company": "AvatarSystems",
-            "orderValue": "$359",
-            "orderDate": "10/07/2023",
-            "status": "New",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Carlos Garcia",
-            "company": "SmoozeShift",
-            "orderValue": "$747",
-            "orderDate": "24/07/2023",
-            "status": "New",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Elizabeth Bailey",
-            "company": "Prime Time Telecom",
-            "orderValue": "$564",
-            "orderDate": "08/08/2023",
-            "status": "In-progress",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Ryan Brown",
-            "company": "OmniTech Corporation",
-            "orderValue": "$541",
-            "orderDate": "31/08/2023",
-            "status": "In-progress",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Ryan Young",
-            "company": "DataStream Inc.",
-            "orderValue": "$769",
-            "orderDate": "01/05/2023",
-            "status": "Completed",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Hailey Adams",
-            "company": "FlowRush",
-            "orderValue": "$922",
-            "orderDate": "10/06/2023",
-            "status": "Completed",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Sophia Turner",
-            "company": "CloudWave",
-            "orderValue": "$650",
-            "orderDate": "11/03/2023",
-            "status": "New",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Ethan Morris",
-            "company": "DataMinds",
-            "orderValue": "$732",
-            "orderDate": "22/01/2023",
-            "status": "Completed",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Olivia Clark",
-            "company": "SkyNet Solutions",
-            "orderValue": "$815",
-            "orderDate": "15/09/2023",
-            "status": "In-progress",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Elizabeth Lee",
-            "company": "AvatarSystems",
-            "orderValue": "$359",
-            "orderDate": "10/07/2023",
-            "status": "New",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Carlos Garcia",
-            "company": "SmoozeShift",
-            "orderValue": "$747",
-            "orderDate": "24/07/2023",
-            "status": "New",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Elizabeth Bailey",
-            "company": "Prime Time Telecom",
-            "orderValue": "$564",
-            "orderDate": "08/08/2023",
-            "status": "In-progress",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Ryan Brown",
-            "company": "OmniTech Corporation",
-            "orderValue": "$541",
-            "orderDate": "31/08/2023",
-            "status": "In-progress",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Ryan Young",
-            "company": "DataStream Inc.",
-            "orderValue": "$769",
-            "orderDate": "01/05/2023",
-            "status": "Completed",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Hailey Adams",
-            "company": "FlowRush",
-            "orderValue": "$922",
-            "orderDate": "10/06/2023",
-            "status": "Completed",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Sophia Turner",
-            "company": "CloudWave",
-            "orderValue": "$650",
-            "orderDate": "11/03/2023",
-            "status": "New",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Ethan Morris",
-            "company": "DataMinds",
-            "orderValue": "$732",
-            "orderDate": "22/01/2023",
-            "status": "Completed",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Olivia Clark",
-            "company": "SkyNet Solutions",
-            "orderValue": "$815",
-            "orderDate": "15/09/2023",
-            "status": "In-progress",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Elizabeth Lee",
-            "company": "AvatarSystems",
-            "orderValue": "$359",
-            "orderDate": "10/07/2023",
-            "status": "New",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Carlos Garcia",
-            "company": "SmoozeShift",
-            "orderValue": "$747",
-            "orderDate": "24/07/2023",
-            "status": "New",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Elizabeth Bailey",
-            "company": "Prime Time Telecom",
-            "orderValue": "$564",
-            "orderDate": "08/08/2023",
-            "status": "In-progress",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Ryan Brown",
-            "company": "OmniTech Corporation",
-            "orderValue": "$541",
-            "orderDate": "31/08/2023",
-            "status": "In-progress",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Ryan Young",
-            "company": "DataStream Inc.",
-            "orderValue": "$769",
-            "orderDate": "01/05/2023",
-            "status": "Completed",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Hailey Adams",
-            "company": "FlowRush",
-            "orderValue": "$922",
-            "orderDate": "10/06/2023",
-            "status": "Completed",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-
-          {
-            "customerName": "Sophia Turner",
-            "company": "CloudWave",
-            "orderValue": "$650",
-            "orderDate": "11/03/2023",
-            "status": "New",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Ethan Morris",
-            "company": "DataMinds",
-            "orderValue": "$732",
-            "orderDate": "22/01/2023",
-            "status": "Completed",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          },
-          {
-            "customerName": "Olivia Clark",
-            "company": "SkyNet Solutions",
-            "orderValue": "$815",
-            "orderDate": "15/09/2023",
-            "status": "In-progress",
-            "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
-          }
-    ]
-  }
-  
+  "overview": [
+    {
+      "name": "Turnover",
+      "value": 92.405,
+      "period": 5.39,
+      "icon": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925416/Chefify/oodvleks2jx9gmhgoh3x.png",
+      "currency": true,
+      "id": "d165"
+    },
+    {
+      "name": "Profit",
+      "value": 32.218,
+      "period": 5.39,
+      "icon": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925417/Chefify/icljrfxnlgwmkj0npmzm.png",
+      "currency": true,
+      "id": "638f"
+    },
+    {
+      "name": "New customer",
+      "value": 298,
+      "period": 6.84,
+      "icon": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925417/Chefify/wmslsbipnx9ra38r52mi.png",
+      "currency": false,
+      "id": "0b0f"
+    }
+  ],
+  "customer": [
+    {
+      "id": "1",
+      "customerName": "Elizabeth Le",
+      "company": "AvatarSystems",
+      "orderValue": "$359",
+      "orderDate": "10/07/2023",
+      "status": "New",
+      "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
+    },
+    {
+      "id": "2",
+      "customerName": "Carlos Garcia",
+      "company": "SmoozeShift",
+      "orderValue": "$747",
+      "orderDate": "24/07/2023",
+      "status": "New",
+      "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
+    },
+    {
+      "id": "3",
+      "customerName": "Elizabeth Bailey",
+      "company": "Prime Time Telecom",
+      "orderValue": "$564",
+      "orderDate": "08/08/2023",
+      "status": "New",
+      "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
+    },
+    {
+      "id": "4",
+      "customerName": "Ryan Brown",
+      "company": "OmniTech Corporation",
+      "orderValue": "$541",
+      "orderDate": "31/08/2023",
+      "status": "In-progress",
+      "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
+    },
+    {
+      "id": "5",
+      "customerName": "Ryan Young",
+      "company": "DataStream Inc.",
+      "orderValue": "$769",
+      "orderDate": "01/05/2023",
+      "status": "In-progress",
+      "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
+    },
+    {
+      "id": "6",
+      "customerName": "Hailey Adams",
+      "company": "FlowRush",
+      "orderValue": "$922",
+      "orderDate": "10/06/2023",
+      "status": "Completed",
+      "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
+    },
+    {
+      "id": "7",
+      "customerName": "Sophia Turner",
+      "company": "CloudWave",
+      "orderValue": "$650",
+      "orderDate": "11/03/2023",
+      "status": "New",
+      "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
+    },
+    {
+      "id": "8",
+      "customerName": "Ethan Morris",
+      "company": "DataMinds",
+      "orderValue": "$732",
+      "orderDate": "22/01/2023",
+      "status": "Completed",
+      "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
+    },
+    {
+      "id": "9",
+      "customerName": "Olivia Clark",
+      "company": "SkyNet Solutions",
+      "orderValue": "$815",
+      "orderDate": "15/09/2023",
+      "status": "In-progress",
+      "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
+    },
+    {
+      "id": "10",
+      "customerName": "Elizabeth Lee",
+      "company": "AvatarSystems",
+      "orderValue": "$359",
+      "orderDate": "10/07/2023",
+      "status": "New",
+      "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
+    },
+    {
+      "id": "11",
+      "customerName": "Carlos Garcia",
+      "company": "SmoozeShift",
+      "orderValue": "$747",
+      "orderDate": "24/07/2023",
+      "status": "New",
+      "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
+    },
+    {
+      "id": "12",
+      "customerName": "Elizabeth Bailey",
+      "company": "Prime Time Telecom",
+      "orderValue": "$564",
+      "orderDate": "08/08/2023",
+      "status": "In-progress",
+      "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
+    },
+    {
+      "id": "13",
+      "customerName": "Ryan Brown",
+      "company": "OmniTech Corporation",
+      "orderValue": "$541",
+      "orderDate": "31/08/2023",
+      "status": "In-progress",
+      "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
+    },
+    {
+      "id": "14",
+      "customerName": "Ryan Young",
+      "company": "DataStream Inc.",
+      "orderValue": "$769",
+      "orderDate": "01/05/2023",
+      "status": "Completed",
+      "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
+    }
+  ]
+}
