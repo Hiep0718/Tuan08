@@ -1,0 +1,26 @@
+{
+    "overview": [
+      {
+        "name": "Turnover",
+        "value": 92.405,
+        "period": 5.39,
+        "icon": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925416/Chefify/oodvleks2jx9gmhgoh3x.png",
+        "currency": true
+      },
+      {
+        "name": "Profit",
+        "value": 32.218,
+        "period": 5.39,
+        "icon":"https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925417/Chefify/icljrfxnlgwmkj0npmzm.png",
+        "currency": true
+      },
+      {
+        "name": "New customer",
+        "value": 298,
+        "period": 6.84,
+        "icon": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925417/Chefify/wmslsbipnx9ra38r52mi.png",
+        "currency": false
+      }
+    ]
+  }
+  

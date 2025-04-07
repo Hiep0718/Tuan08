@@ -8,6 +8,7 @@ import integrations from '../assets/setting.svg'
 import update from '../assets/update.png'
 import DataTable from 'datatables.net-react';
 import DT from 'datatables.net-dt';
+import { useEffect, useState } from 'react'
 
 
 export default function RootPage(){
@@ -62,6 +63,25 @@ export default function RootPage(){
           avatar: "https://via.placeholder.com/36",
         },
       ];
+      const [loading, setLoading] = useState(true);
+      const [error, setError] = useState(null);
+      const [json, setData] = useState([]);
+      useEffect(() => {
+        fetch('http://localhost:8000/overview')
+          .then((res) => res.json())
+          .then((data) => {
+            setData(data);
+            setLoading(false);
+          })
+          .catch((err) => {
+            console.error('Error fetching data:', err);
+            setError(err);
+            setLoading(false);
+          });
+      }, []);
+      const bgColors = ['#ffe4e6', '#eff6ff', '#eff6ff']; 
+      if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error.message}</p>;
     return(
         <>
         <div className="container">
@@ -120,15 +140,19 @@ export default function RootPage(){
                     <p>Overviews</p>
                 </div>
                 <div className='over-item'>
-                    <div className="item">
-                        
+                {json.map((item, idx) => (
+                    <div className="item" key={idx} style={{ background: bgColors[idx] }}>
+                    <div className="item-header">
+                        <h4>{item.name}</h4>
+                        <img src={item.icon} alt="" />
                     </div>
-                    <div className="item">
-                        
+                    <h2>{item.currency ? `$${item.value.toLocaleString()}` : item.value}</h2>
+                    <div className="item-footer">
+                        <span className="item-percent">▲ {item.percent}%</span>
+                        <span className="item-period">{item.period} period of change</span>
                     </div>
-                    <div className="item">
-                        
                     </div>
+                ))}
                 </div>
             </div>
             <div className="content">
