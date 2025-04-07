@@ -13,6 +13,8 @@ import { useEffect, useState } from 'react'
 
 export default function RootPage(){
     DataTable.use(DT);
+    const [selectedRow, setSelectedRow] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);      
       const [loading, setLoading] = useState(true);
       const [error, setError] = useState(null);
       const [loading1, setLoading1] = useState(true);
@@ -157,7 +159,7 @@ export default function RootPage(){
                         <td style={{ textAlign: "center", verticalAlign: "middle" }}>
                             <input type="checkbox" />
                         </td>
-                        <td style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                        <td style={{ display: "flex", alignItems: "center", gap: "10px"}}>
                             <img
                             src={item.avatar}
                             alt="avatar"
@@ -192,8 +194,13 @@ export default function RootPage(){
                             {item.status}
                             </span>
                         </td>
-                        <td style={{ textAlign: "center" }}>
-                            <span style={{ cursor: "pointer", color: "#9ca3af" }}>✏️</span>
+                        <td style={{ textAlign: "center", cursor:"pointer" }} 
+                            onClick={() => {
+                                setSelectedRow(item);  
+                                setIsModalOpen(true);  
+                            }}
+                        >
+                            <img src="https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925415/Chefify/umkio9m7o40tobo8fkm8.png" alt="" />
                         </td>
                         </tr>
                     ))}
@@ -204,5 +211,87 @@ export default function RootPage(){
                 </div>
             </div>
         </div>
+        {isModalOpen && selectedRow && (
+        <div style={{
+            position: "fixed", top: 0, left: 0, right: 0, bottom: 0,
+            backgroundColor: "rgba(0,0,0,0.5)", display: "flex",
+            alignItems: "center", justifyContent: "center",
+            zIndex: 1000,
+        }}>
+            <div style={{
+            background: "#fff", padding: "20px", borderRadius: "10px",
+            minWidth: "400px", maxWidth: "500px",
+            }}>
+            <h2 style={{ marginBottom: "20px" }}>Sửa thông tin khách hàng</h2>
+
+            {/* Form */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                <input
+                type="text"
+                value={selectedRow.customerName}
+                onChange={(e) =>
+                    setSelectedRow({ ...selectedRow, customerName: e.target.value })
+                }
+                placeholder="Customer Name"
+                />
+                <input
+                type="text"
+                value={selectedRow.company}
+                onChange={(e) =>
+                    setSelectedRow({ ...selectedRow, company: e.target.value })
+                }
+                placeholder="Company"
+                />
+                <input
+                type="text"
+                value={selectedRow.orderValue}
+                onChange={(e) =>
+                    setSelectedRow({ ...selectedRow, orderValue: e.target.value })
+                }
+                placeholder="Order Value"
+                />
+                <input
+                type="text"
+                value={selectedRow.orderDate}
+                onChange={(e) =>
+                    setSelectedRow({ ...selectedRow, orderDate: e.target.value })
+                }
+                placeholder="Order Date"
+                />
+                <select
+                value={selectedRow.status}
+                onChange={(e) =>
+                    setSelectedRow({ ...selectedRow, status: e.target.value })
+                }
+                >
+                <option value="New">New</option>
+                <option value="In-progress">In-progress</option>
+                <option value="Completed">Completed</option>
+                </select>
+            </div>
+
+            {/* Buttons */}
+            <div style={{ marginTop: "20px", display: "flex", justifyContent: "flex-end", gap: "10px" }}>
+                <button
+                onClick={() => setIsModalOpen(false)}
+                style={{ padding: "8px 16px", backgroundColor: "#ccc", border: "none", borderRadius: "5px", cursor: "pointer" }}
+                >
+                Hủy
+                </button>
+                <button
+                onClick={() => {
+                    // TODO: xử lý lưu dữ liệu
+                    console.log("Dữ liệu sau khi sửa:", selectedRow);
+                    setIsModalOpen(false);
+                }}
+                style={{ padding: "8px 16px", backgroundColor: "#4ade80", border: "none", borderRadius: "5px", color: "#fff", cursor: "pointer" }}
+                >
+                Lưu
+                </button>
+            </div>
+            </div>
+        </div>
+        )}
+
         </>)
 }
