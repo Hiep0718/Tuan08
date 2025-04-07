@@ -8,7 +8,9 @@ import integrations from '../assets/setting.svg'
 import update from '../assets/update.png'
 import DataTable from 'datatables.net-react';
 import DT from 'datatables.net-dt';
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
+import { NavLink } from "react-router-dom";
+
 
 
 export default function RootPage(){
@@ -84,30 +86,53 @@ export default function RootPage(){
                 <div className="logo">
                     <img src= "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925416/Chefify/lbxyu1z0ly9wfntyndwy.png"  alt="logo" /> 
                 </div>    
-                <button className='btn'>
-                    <img src={Dasdboard} alt="dashboard"/>
+                <NavLink 
+                    to="/dashboard"
+                    className={({ isActive }) => isActive ? "btn" : "btn-unactive"}
+                >
+                    <img src={Dasdboard} alt="dashboard" />
                     <h2>Dashboard</h2>
-                </button>
-                <button className='btn-unactive'>
-                    <img src={Project} alt="project"/>
+                </NavLink>
+
+                <NavLink 
+                    to="/project"
+                    className={({ isActive }) => isActive ? "btn" : "btn-unactive"}
+                >
+                    <img src={Project} alt="project" />
                     <h2>Project</h2>
-                </button>
-                <button className='btn-unactive'>
-                    <img src={Team} alt="team"/>
+                </NavLink>
+
+                <NavLink 
+                    to="/team"
+                    className={({ isActive }) => isActive ? "btn" : "btn-unactive"}
+                >
+                    <img src={Team} alt="team" />
                     <h2>Team</h2>
-                </button>
-                <button className='btn-unactive'>
-                    <img src={Ana} alt="analys"/>
+                </NavLink>
+
+                <NavLink 
+                    to="/analytics"
+                    className={({ isActive }) => isActive ? "btn" : "btn-unactive"}
+                >
+                    <img src={Ana} alt="analytics" />
                     <h2>Analytics</h2>
-                </button>
-                <button className='btn-unactive'>
-                    <img src={Messegae} alt="message"/>
+                </NavLink>
+
+                <NavLink 
+                    to="/messages"
+                    className={({ isActive }) => isActive ? "btn" : "btn-unactive"}
+                >
+                    <img src={Messegae} alt="message" />
                     <h2>Messages</h2>
-                </button>
-                <button className='btn-unactive'>
-                    <img src={integrations} alt="integrations"/>
+                </NavLink>
+
+                <NavLink 
+                    to="/integrations"
+                    className={({ isActive }) => isActive ? "btn" : "btn-unactive"}
+                >
+                    <img src={integrations} alt="integrations" />
                     <h2>Integrations</h2>
-                </button>
+                </NavLink>
                 <div className='div-update'>
                 <div className="update">
                     <img src={update} alt="update" />

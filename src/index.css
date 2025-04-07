@@ -314,3 +314,9 @@ tr:hover {
   padding: 10px;
   margin: 10px;
 }
+.menu a {
+  text-decoration: none;
+  color: inherit;
+  display: flex; /* để icon + text nằm cùng hàng */
+  align-items: center;
+}
