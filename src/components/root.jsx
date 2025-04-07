@@ -15,12 +15,27 @@ export default function RootPage(){
     DataTable.use(DT);
     const [selectedRow, setSelectedRow] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);      
+    const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+    const [, setForceRender] = useState(0);
+    const [customer, setCustomer] = useState(
+        {
+            customerName: '',
+            avatar: '',
+            company: '',
+            orderValue: '',
+            orderDate: '',
+            status: 'New'
+          }
+    );   
       const [loading, setLoading] = useState(true);
       const [error, setError] = useState(null);
       const [loading1, setLoading1] = useState(true);
       const [error1, setError1] = useState(null);
       const [json, setJson] = useState([]);
       const [data, setData] = useState([]);
+      const forceUpdate = () => {
+        setForceRender(prev => prev + 1);
+      };
       useEffect(() => {
         fetch('http://localhost:8000/overview')
           .then((res) => res.json())
@@ -130,7 +145,10 @@ export default function RootPage(){
                         <img src="https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925415/Chefify/n4drhljcfaoanozfgp3l.png" alt="" />
                         <p>Detailed report</p>
                     </div>   
-                    <button className='btn-add'>
+                    <button className='btn-add' 
+                     onClick={() => {
+                        setIsAddModalOpen(true);  
+                    }}>
                         <img src="https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925415/Chefify/idaus44p3xxm0ssqoeku.png" alt="" />
                         <p>Add customer</p>
                     </button>
@@ -301,6 +319,124 @@ export default function RootPage(){
 
                     } catch (error) {
                     console.error("Update lỗi:", error);
+                    }
+                }}
+                style={{ padding: "8px 16px", backgroundColor: "#4ade80", border: "none", borderRadius: "5px", color: "#fff", cursor: "pointer" }}
+                >
+                Lưu
+                </button>
+            </div>
+            </div>
+        </div>
+        )}
+        {isAddModalOpen && (
+        <div style={{
+            position: "fixed", top: 0, left: 0, right: 0, bottom: 0,
+            backgroundColor: "rgba(0,0,0,0.5)", display: "flex",
+            alignItems: "center", justifyContent: "center",
+            zIndex: 1000,
+        }}>
+            <div style={{
+            background: "#fff", padding: "20px", borderRadius: "10px",
+            minWidth: "400px", maxWidth: "500px",
+            }}>
+            <h2 style={{ marginBottom: "20px" }}>Thêm Khách hàng mới</h2>
+
+            {/* Form */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                <input
+                type="text"
+                value={customer.customerName}
+                onChange={(e) =>
+                    setCustomer({ ...customer, customerName: e.target.value })
+                }
+                placeholder="Customer Name"
+                />
+                <input
+                type="text"
+                value={customer.avatar}
+                onChange={(e) =>
+                    setCustomer({ ...customer, avatar: e.target.value })
+                }
+                placeholder="Link avatar"
+                />
+                <input
+                type="text"
+                value={customer.company}
+                onChange={(e) =>
+                    setCustomer({ ...customer, company: e.target.value })
+                }
+                placeholder="Company"
+                />
+                <input
+                type="text"
+                value={customer.orderValue}
+                onChange={(e) =>
+                    setCustomer({ ...customer, orderValue: e.target.value })
+                }
+                placeholder="Order Value"
+                />
+                <input
+                type="text"
+                value={customer.orderDate}
+                onChange={(e) =>
+                    setCustomer({ ...customer, orderDate: e.target.value })
+                }
+                placeholder="Order Date"
+                />
+                <select
+                value={customer.status}
+                onChange={(e) =>
+                    setCustomer({ ...customer, status: e.target.value })
+                }
+                >
+                <option value="New">New</option>
+                <option value="In-progress">In-progress</option>
+                <option value="Completed">Completed</option>
+                </select>
+            </div>
+
+            {/* Buttons */}
+            <div style={{ marginTop: "20px", display: "flex", justifyContent: "flex-end", gap: "10px" }}>
+                <button
+                onClick={() => setIsAddModalOpen(false)}
+                style={{ padding: "8px 16px", backgroundColor: "#ccc", border: "none", borderRadius: "5px", cursor: "pointer" }}
+                >
+                Hủy
+                </button>
+                <button
+                onClick={async () => {
+                    try {
+                    const response = await fetch(`http://localhost:8000/customer`, {
+                        method: "POST",
+                        headers: {
+                        "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(customer),
+                    });
+
+                    if (!response.ok) {
+                        throw new Error("Failed to add data");
+                    }
+
+                    // Khi POST thành công → refetch lại dữ liệu
+                    const updatedData = await fetch('http://localhost:8000/customer').then(res => res.json());
+                    setData(updatedData);
+                    setIsAddModalOpen(false);
+                    console.log("Thêm thành công!");
+                    setCustomer(
+                        {
+                            customerName: '',
+                            avatar: '',
+                            company: '',
+                            orderValue: '',
+                            orderDate: '',
+                            status: 'New'
+                          }
+                    );
+                    forceUpdate();
+                    } catch (error) {
+                    console.error("Thêm lỗi:", error);
                     }
                 }}
                 style={{ padding: "8px 16px", backgroundColor: "#4ade80", border: "none", borderRadius: "5px", color: "#fff", cursor: "pointer" }}
