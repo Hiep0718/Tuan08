@@ -256,4 +256,61 @@ table.dataTable {
   color: #10b981; /* Green color */
   font-weight: bold;
 }
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title > img{
+  width: 16px;
+  height: 17px;
+  margin-right: 5px;
+ }
+ .title > p{
+  font-size: 20px;
+  font-weight: bold;
+  margin: auto;
+ }
 
+.add-cus{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.btn-add > img{
+ width: 16px;
+ height: 17px;
+ margin-right: 5px;
+}
+.btn-add{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #fefefe;
+  color: #d5abbf;
+  border: 1px solid #d5abbf;
+}
+.btn-add:hover{
+  background-color: #e0c2d1;
+  cursor: pointer;
+}
+.btn-add:active{
+  background-color: #ff90c7;
+  cursor: pointer;
+}
+tr:hover {
+  background-color: #b2d8ff; /* Màu nền nhạt khi hover */
+}
+.display{
+          
+  overflow: hidden;           
+  border-Collapse: collapse;   
+  width: 100%;
+}
+.boder-table{
+  border-radius: 8px;  
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 10px;
+}
