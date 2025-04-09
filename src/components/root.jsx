@@ -10,6 +10,7 @@ import DataTable from 'datatables.net-react';
 import DT from 'datatables.net-dt';
 import { useEffect, useState } from 'react';
 import { NavLink, Outlet } from "react-router-dom";
+import { useMatches } from 'react-router-dom';
 
 
 
@@ -65,18 +66,29 @@ export default function RootPage(){
           });
       }, []);
       const bgColors = ['#ffe4e6', '#eff6ff', '#eff6ff']; 
-      if (loading1) return <p>Loading...</p>;
-    if (error1) return <p>Error: {error1.message}</p>;
-    if (error) return <p>Error: {error.message}</p>;
+    //   if (loading1) return <p>Loading...</p>;
+    // if (error1) return <p>Error: {error1.message}</p>;
+    // if (error) return <p>Error: {error.message}</p>;
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const matches = useMatches();
+
+    // lấy thông tin route hiện tại
+    const currentRoute = matches[matches.length - 1];
+
+    // lấy tiêu đề cho h2
+    const pageTitle = currentRoute?.handle?.title || 'Trang mặc định';
     return(
         <>
         <div className="container">
             <div className="header">
-                <h2>
-                    Dashboard
+                <h2 className='title-h'>
+                    {pageTitle}
                 </h2>
-                <div>
-                    <input type="text" />
+                <div className='head-content'>
+                    <div className="search-box">
+                        <img src="https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925417/Chefify/uffu6mgzfukgco6ihuqo.png" alt="Search" className="search-icon"/>
+                        <input type="text" placeholder="Search..."/>
+                    </div>
                     <img src="https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925416/Chefify/xc3zlre9p62tochmtcbl.png" alt="ring" />
                     <img src="https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925417/Chefify/qyqyilcf6zjdjrl66xj5.png" alt="hoi" />
                     <img src="https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925417/Chefify/vcl1lfq9xiipe0kead1j.png" alt="" />
@@ -98,7 +110,7 @@ export default function RootPage(){
                     to="/project"
                     className={({ isActive }) => isActive ? "btn" : "btn-unactive"}
                 >
-                    <img src={Project} alt="project" />
+                    <img src="https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925415/Chefify/ureezaihg3qpdasanyc4.png" alt="project" />
                     <h2>Project</h2>
                 </NavLink>
 
@@ -106,7 +118,7 @@ export default function RootPage(){
                     to="/team"
                     className={({ isActive }) => isActive ? "btn" : "btn-unactive"}
                 >
-                    <img src={Team} alt="team" />
+                    <img src="https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925416/Chefify/myc5sadytimv0nbipuqy.png" alt="team" />
                     <h2>Team</h2>
                 </NavLink>
 
@@ -114,7 +126,7 @@ export default function RootPage(){
                     to="/analytics"
                     className={({ isActive }) => isActive ? "btn" : "btn-unactive"}
                 >
-                    <img src={Ana} alt="analytics" />
+                    <img src="https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925416/Chefify/azlpeij211ckdfrrkof7.png" alt="analytics" />
                     <h2>Analytics</h2>
                 </NavLink>
 
@@ -122,7 +134,7 @@ export default function RootPage(){
                     to="/messages"
                     className={({ isActive }) => isActive ? "btn" : "btn-unactive"}
                 >
-                    <img src={Messegae} alt="message" />
+                    <img src="https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925417/Chefify/wekqko56dg79n2agwfor.png" alt="message" />
                     <h2>Messages</h2>
                 </NavLink>
 
@@ -130,7 +142,7 @@ export default function RootPage(){
                     to="/integrations"
                     className={({ isActive }) => isActive ? "btn" : "btn-unactive"}
                 >
-                    <img src={integrations} alt="integrations" />
+                    <img src="https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/xye4y7isfwg8b0qvxgma.png" alt="integrations" />
                     <h2>Integrations</h2>
                 </NavLink>
                 <div className='div-update'>

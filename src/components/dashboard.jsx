@@ -63,7 +63,13 @@ export default function Dashborad(){
                 <div>Loading...</div> // hoặc Spinner đẹp hơn
                 ) : (
                 <div className='boder-table'>
-                    <DataTable className="display">
+                    <DataTable className="display" 
+                    options={{
+                        language: {
+                          info: " _TOTAL_ results", 
+                        }
+                      }}
+                    >
                     <thead>
                     <tr>
                         <th><input type="checkbox" name="" id="" /></th>

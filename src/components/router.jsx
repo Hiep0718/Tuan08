@@ -13,13 +13,13 @@ const router = createBrowserRouter([
     path: "/",
     element: <RootPage />,
     children: [
-        { path: "dashboard", element: <Dashboard /> },
-        { path: "project", element: <ProjectPage /> },
-        { path: "team", element: <TeamPage /> },
-        { path: "analytics", element: <AnalyticsPage /> },
-        { path: "messages", element: <MessagesPage /> },
-        { path: "integrations", element: <IntegrationsPage /> },
-        { path: "*", element: <NotFoul /> }
+        { path: "dashboard", element: <Dashboard /> ,handle: { title: "Dashboard" }},
+        { path: "project", element: <ProjectPage /> ,handle: { title: "Project" }},
+        { path: "team", element: <TeamPage /> ,handle: { title: "Team" }},
+        { path: "analytics", element: <AnalyticsPage /> ,handle: { title: "Analytics" }},
+        { path: "messages", element: <MessagesPage /> ,handle: { title: "Messages" }},
+        { path: "integrations", element: <IntegrationsPage /> ,handle: { title: "Integrations" }},
+        { path: "*", element: <NotFoul /> ,handle: { title: "404 Page" }}
     ],
   },
 ]);

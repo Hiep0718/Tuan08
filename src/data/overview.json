@@ -196,15 +196,6 @@
       "orderValue": "123123123",
       "orderDate": "123123123",
       "status": "Completed"
-    },
-    {
-      "id": "353d",
-      "customerName": "Hieepj",
-      "avatar": "",
-      "company": "123",
-      "orderValue": "123",
-      "orderDate": "123",
-      "status": "New"
     }
   ]
 }
