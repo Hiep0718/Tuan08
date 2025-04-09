@@ -6,6 +6,7 @@ import TeamPage from "./team";
 import AnalyticsPage from "./analys";
 import MessagesPage from "./magge";
 import IntegrationsPage from "./intergra";
+import NotFoul from "./notFoul";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
         { path: "analytics", element: <AnalyticsPage /> },
         { path: "messages", element: <MessagesPage /> },
         { path: "integrations", element: <IntegrationsPage /> },
+        { path: "*", element: <NotFoul /> }
     ],
   },
 ]);

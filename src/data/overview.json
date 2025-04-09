@@ -41,7 +41,7 @@
       "company": "SmoozeShift",
       "orderValue": "$747",
       "orderDate": "24/07/2023",
-      "status": "New",
+      "status": "In-progress",
       "avatar": "https://res.cloudinary.com/dzg9a53dm/image/upload/v1743925418/Chefify/hmi2dehpbntllnpt0cdm.png"
     },
     {
@@ -196,6 +196,15 @@
       "orderValue": "123123123",
       "orderDate": "123123123",
       "status": "Completed"
+    },
+    {
+      "id": "353d",
+      "customerName": "Hieepj",
+      "avatar": "",
+      "company": "123",
+      "orderValue": "123",
+      "orderDate": "123",
+      "status": "New"
     }
   ]
 }
