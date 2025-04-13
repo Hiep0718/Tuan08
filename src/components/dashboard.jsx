@@ -28,7 +28,7 @@ export default function Dashborad(){
         setForceRender(prev => prev + 1);
       };
       useEffect(() => {
-        fetch('http://localhost:8000/customer')
+        fetch('http://localhost:3000/customer')
           .then((res) => res.json())
           .then((data) => {
             setData(data);

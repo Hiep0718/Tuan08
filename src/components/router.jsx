@@ -13,6 +13,11 @@ const router = createBrowserRouter([
     path: "/",
     element: <RootPage />,
     children: [
+        {
+          index: true,
+          element: <Dashboard />,
+          handle: { title: "Dashboard" }
+        },
         { path: "dashboard", element: <Dashboard /> ,handle: { title: "Dashboard" }},
         { path: "project", element: <ProjectPage /> ,handle: { title: "Project" }},
         { path: "team", element: <TeamPage /> ,handle: { title: "Team" }},
